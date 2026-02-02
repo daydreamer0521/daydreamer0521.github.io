@@ -106,7 +106,8 @@ body {
     letter-spacing: 1px;
 }
 
-.score, .level {
+.score,
+.level {
     font-size: 2.5rem;
     font-weight: bold;
     text-align: center;
@@ -228,44 +229,137 @@ body {
     .game-header h1 {
         font-size: 1.8rem;
     }
-    
+
     .game-description {
         font-size: 0.9rem;
     }
-    
+
     .game-content {
         flex-direction: column;
         align-items: center;
     }
-    
+
+    /* 移动端覆盖式控件 - 优化版 */
+    .game-main {
+        position: relative;
+        /* 确保作为绝对定位的参考 */
+    }
+
     .mobile-controls {
         display: flex;
+        flex-direction: row;
+        /* 水平布局 */
+        justify-content: space-between;
+        /* 左右分开 */
+        position: absolute;
+        /* 绝对定位悬浮 */
+        bottom: 20px;
+        left: 0;
+        width: 100%;
+        padding: 0 20px;
+        z-index: 100;
+        /* 确保在最上层 */
+        pointer-events: none;
+        /* 让空白区域不阻挡点击，但按钮要阻挡 */
+        margin-top: 0;
+        /* 重置之前的margin */
     }
-    
-    .controls-info {
+
+    .control-group {
+        display: flex;
+        gap: 15px;
+        /* 按钮间距 */
+        pointer-events: auto;
+        /* 恢复按钮点击 */
+    }
+
+    .control-group-left {
+        align-items: flex-end;
+        /* 底部对齐 */
+    }
+
+    .control-group-right {
+        align-items: flex-end;
+    }
+
+    /* 大号半透明按钮 */
+    .mobile-btn {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        /* 圆形按钮，手感更好 */
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(5px);
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        font-size: 1.8rem;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .mobile-btn:active {
+        background: rgba(255, 255, 255, 0.4);
+        transform: scale(0.9);
+    }
+
+    /* 隐藏侧边栏不必要的信息，只保留分数和等级 */
+    .game-sidebar {
+        flex-direction: row;
+        /* 横向排列 */
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .info-panel {
+        padding: 10px;
+        min-width: 80px;
+    }
+
+    .info-panel h3 {
+        font-size: 0.8rem;
+        margin-bottom: 5px;
+    }
+
+    .score,
+    .level {
+        font-size: 1.5rem;
+    }
+
+    /* 隐藏说明和下一个提示，以节省空间给画面 */
+    .controls-info,
+    .info-panel:nth-child(3) {
+        /* 第三个是 Next Canvas */
         display: none;
     }
-    
+
+    /* 确保Canvas全宽 */
     #gameCanvas {
-        max-width: 100%;
+        width: 100%;
+        max-width: 400px;
+        /* 限制最大宽度 */
         height: auto;
     }
+
+    /* 给底部留出按钮空间，虽然按钮是悬浮的，但最好不要盖住太多 */
+    /* 由于按钮在两侧，中间主区域是空的，所以不加padding也可以，或者加一点 */
 }
 
 @media (max-width: 480px) {
     body {
         padding: 10px;
     }
-    
+
     .game-header h1 {
         font-size: 1.5rem;
     }
-    
+
     .info-panel {
         padding: 15px;
     }
-    
-    .score, .level {
+
+    .score,
+    .level {
         font-size: 2rem;
     }
 }
