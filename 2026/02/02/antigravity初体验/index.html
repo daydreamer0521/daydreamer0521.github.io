@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.26.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"giscus","storage":true,"lazyload":false,"nav":{"giscus":null,"text":"Giscus评论","order":1},"activeClass":"giscus"},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="Google的AI IDE">
+<meta property="og:type" content="article">
+<meta property="og:title" content="antigravity初体验">
+<meta property="og:url" content="http://example.com/2026/02/02/antigravity%E5%88%9D%E4%BD%93%E9%AA%8C/index.html">
+<meta property="og:site_name" content="CNN&#39;s blog">
+<meta property="og:description" content="Google的AI IDE">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2026-02-02T13:28:11.000Z">
+<meta property="article:modified_time" content="2026-02-02T15:43:04.619Z">
+<meta property="article:author" content="cnn">
+<meta property="article:tag" content="工具">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/2026/02/02/antigravity%E5%88%9D%E4%BD%93%E9%AA%8C/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2026/02/02/antigravity%E5%88%9D%E4%BD%93%E9%AA%8C/","path":"2026/02/02/antigravity初体验/","title":"antigravity初体验"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>antigravity初体验 | CNN's blog</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">CNN's blog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">......</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A6%81%E6%B1%82"><span class="nav-number">1.</span> <span class="nav-text">要求</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-number">2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%99%BB%E5%BD%95"><span class="nav-number">3.</span> <span class="nav-text">登录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8"><span class="nav-number">4.</span> <span class="nav-text">使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%8E%AE-%E4%BA%92%E5%8A%A8%E5%B0%8F%E6%B8%B8%E6%88%8F%EF%BC%9A%E6%B5%81%E6%B2%99%E4%BF%84%E7%BD%97%E6%96%AF%E6%96%B9%E5%9D%97"><span class="nav-number">5.</span> <span class="nav-text">🎮 互动小游戏：流沙俄罗斯方块</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="cnn"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">cnn</p>
+  <div class="site-description" itemprop="description">人类</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/daydreamer0521" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;daydreamer0521" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:3139984639@qq.com" title="E-Mail → mailto:3139984639@qq.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2026/02/02/antigravity%E5%88%9D%E4%BD%93%E9%AA%8C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="cnn">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CNN's blog">
+      <meta itemprop="description" content="人类">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="antigravity初体验 | CNN's blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          antigravity初体验
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2026-02-02 21:28:11 / 修改时间：23:43:04" itemprop="dateCreated datePublished" datetime="2026-02-02T21:28:11+08:00">2026-02-02</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%B7%A5%E5%85%B7/" itemprop="url" rel="index"><span itemprop="name">工具</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>Google的AI IDE</p>
+<span id="more"></span>
+
+<h2 id="要求"><a href="#要求" class="headerlink" title="要求"></a>要求</h2><ul>
+<li>一台能用的电脑(我的系统是ubuntu20.04)</li>
+<li>科学上网工具</li>
+<li>一个Google账号(如果是刚注册的账号可能有问题)</li>
+</ul>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ul>
+<li><p>在<a target="_blank" rel="noopener" href="https://antigravity.google/download?hl=zh-cn">antigravity官网</a>有安装教程</p>
+</li>
+<li><p>但是我在针对linux ubuntu的第二步出现了问题</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">rc@rc-MIX:~$ sudo apt update</span><br><span class="line">命中:1 http://mirrors.aliyun.com/ubuntu bionic InRelease</span><br><span class="line">命中:2 http://mirrors.aliyun.com/ubuntu bionic-security InRelease              </span><br><span class="line">命中:3 http://mirrors.aliyun.com/ubuntu bionic-updates InRelease               </span><br><span class="line">命中:4 http://mirrors.aliyun.com/ubuntu bionic-backports InRelease             </span><br><span class="line">命中:5 http://mirrors.ustc.edu.cn/ubuntu focal InRelease                       </span><br><span class="line">命中:6 http://mirrors.ustc.edu.cn/ubuntu focal-updates InRelease               </span><br><span class="line">命中:7 https://mirrors.ustc.edu.cn/ros/ubuntu focal InRelease                  </span><br><span class="line">命中:8 http://mirrors.ustc.edu.cn/ubuntu focal-backports InRelease             </span><br><span class="line">命中:9 https://mirrors.ustc.edu.cn/ros2/ubuntu focal InRelease                 </span><br><span class="line">命中:10 http://mirrors.ustc.edu.cn/ubuntu focal-security InRelease             </span><br><span class="line">错误:11 https://us-central1-apt.pkg.dev/projects/antigravity-auto-updater-dev antigravity-debian InRelease</span><br><span class="line">  无法连接上 us-central1-apt.pkg.dev:443 (173.194.174.82)，连接超时</span><br><span class="line">正在读取软件包列表... 完成                                </span><br><span class="line">正在分析软件包的依赖关系树       </span><br><span class="line">正在读取状态信息... 完成       </span><br><span class="line">有 316 个软件包可以升级。请执行 ‘apt list --upgradable’ 来查看它们。</span><br><span class="line">W: 无法下载 https://us-central1-apt.pkg.dev/projects/antigravity-auto-updater-dev/dists/antigravity-debian/InRelease  无法连接上 us-central1-apt.pkg.dev:443 (173.194.174.82)，连接超时</span><br><span class="line">W: 部分索引文件下载失败。如果忽略它们，那将转而使用旧的索引文件。</span><br></pre></td></tr></table></figure>
+
+<p>显示apt连不上antigravity要求的源的地址。但是我开了代理，而且用curl测试是可以连接上的。解决方式是给apt也配置代理。步骤如下：</p>
+<ol>
+<li><p>在科学上网软件里面查看端口号(一般在设置里面)，记住这个端口号。</p>
+</li>
+<li><pre><code class="language-bash">sudo gedit /etc/apt/apt.conf.d/99proxy
+</code></pre>
+<p>然后粘贴(xxxx就是查到的端口号)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Acquire::http::Proxy &quot;http://127.0.0.1:xxxx/&quot;;</span><br><span class="line">Acquire::https::Proxy &quot;http://127.0.0.1:xxxx/&quot;;</span><br></pre></td></tr></table></figure>
+</li>
+<li><pre><code class="language-bash">sudo nano /etc/apt/apt.conf.d/99force-ipv4
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">然后粘贴</span><br><span class="line"></span><br><span class="line">```conf</span><br><span class="line">Acquire::ForceIPv4 &quot;true&quot;;</span><br></pre></td></tr></table></figure>
+</code></pre>
+</li>
+<li><pre><code class="language-bash">sudo rm -rf /var/lib/apt/lists/*
+sudo apt update
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">5. 如果看到下面的内容就是ok了</span><br><span class="line"></span><br><span class="line">   ```bash</span><br><span class="line">   获取:13 https://us-central1-apt.pkg.dev/projects/antigravity-auto-updater-dev antigravity-debian/main amd64 Packages [17.5 kB]</span><br></pre></td></tr></table></figure>
+</code></pre>
+</li>
+</ol>
+</li>
+<li><p>然后继续官网上的最后一步就安装成功了</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install antigravity</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="登录"><a href="#登录" class="headerlink" title="登录"></a>登录</h2><p>登录这一步有点麻烦，在antigravity上点击sign in之后会自动跳转到浏览器继续，但是我在edge浏览器完成登录流程之后没办法定向回到antigravity，换了firefox浏览器之后多出了一步Vierfy，具体就是用安卓手机扫码(需要科学上网)或者接收验证码(大陆手机号也可以)。我扫码之后显示不支持我的手机，因此换成了验证码，Vierfy之后就收到了google antigravity的邮件，证明登录成功了。</p>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>antigravity界面和vscode长得一样，原生语言是英文，下载中文插件重启之后就变成中文了(步骤和vscode一样)。关于具体的使用感受，分点来说</p>
+<ul>
+<li>交互: 我感觉交互和copilot比较像，但是不如copilot那么方便，比较直观的一点是当agent想要在终端运行某些命令时，我不能马上看到具体要运行的命令是什么，需要在上下文找一下才知道</li>
+<li>速度: 不知道是不是网络的问题，我感觉反馈不是特别快，提出一个需求之后需要等待一小段时间才行，这一点和copilot差不多</li>
+<li>agent: 免费额度有点少，我最开始选的是claude sonnet4.5，生成到一半就告诉我额度用尽了(我以为是这一个模型的额度用尽了，结果发现是claude系列的额度都用尽了)后半部分是gemini 3 pro完成的，感觉也可以理解，可能google像突出自家的模型，而且claude也不便宜。有一个让我很惊喜的地方是agent可以自由打开浏览器查看生成效果(仅限Chrome)，因为copilot做不到。</li>
+<li>下面的小游戏是我完全使用antigravity里面的agent实现的，感觉效果还不错，全程没有写一行代码，唯一的工作是等agent写代码，查看效果，告诉agent修改的方向，游戏原型来自<a target="_blank" rel="noopener" href="https://store.steampowered.com/app/2546310/Sandtrix/">戳这里</a></li>
+</ul>
+<hr>
+<h2 id="🎮-互动小游戏：流沙俄罗斯方块"><a href="#🎮-互动小游戏：流沙俄罗斯方块" class="headerlink" title="🎮 互动小游戏：流沙俄罗斯方块"></a>🎮 互动小游戏：流沙俄罗斯方块</h2><p>体验一下不一样的俄罗斯方块！在这个版本中，方块会像沙子一样自然下落，消除行后上方的方块会像流沙一样填补空隙。这与 “antigravity”（反重力）形成了有趣的对比 😄</p>
+<div style="text-align: center; margin: 30px 0;">
+  <iframe src="/games/falling-sand-tetris/index.html" 
+          style="width: 100%; max-width: 900px; height: 700px; border: none; border-radius: 10px; box-shadow: 0 10px 40px rgba(0,0,0,0.3);"
+          title="流沙俄罗斯方块游戏">
+  </iframe>
+</div>
+
+<p><strong>操作说明：</strong></p>
+<ul>
+<li>使用方向键 ← → 移动方块</li>
+<li>使用 ↑ 键旋转方块</li>
+<li>使用 ↓ 键加速下落</li>
+<li>按空格键快速下落</li>
+<li>按 P 键暂停&#x2F;继续</li>
+</ul>
+<p>移动设备可以使用屏幕上的触摸按钮进行控制。祝你玩得开心！🎉</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%B7%A5%E5%85%B7/" rel="tag"># 工具</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2026/01/07/2025%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/" rel="prev" title="2025年终总结">
+                  <i class="fa fa-angle-left"></i> 2025年终总结
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    
+  
+  <div class="comments giscus-container">
+  </div>
+  
+  
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">cnn</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+<script class="next-config" data-name="giscus" type="application/json">{"enable":true,"repo":"daydreamer0521/daydreamer0521.github.io","repo_id":"R_kgDOQm4ViA","category":"Announcements","category_id":"DIC_kwDOQm4ViM4C1fXl","mapping":"pathname","strict":0,"reactions_enabled":1,"emit_metadata":0,"theme":"light","lang":"zh-CN","crossorigin":"anonymous","input_position":"bottom","loading":"lazy"}</script>
+
+<script>
+document.addEventListener('page:loaded', () => {
+  if (!CONFIG.page.comments) return;
+
+  NexT.utils.loadComments('.giscus-container')
+    .then(() => NexT.utils.getScript('https://giscus.app/client.js', {
+      attributes: {
+        async                   : true,
+        crossOrigin             : 'anonymous',
+        'data-repo'             : CONFIG.giscus.repo,
+        'data-repo-id'          : CONFIG.giscus.repo_id,
+        'data-category'         : CONFIG.giscus.category,
+        'data-category-id'      : CONFIG.giscus.category_id,
+        'data-mapping'          : CONFIG.giscus.mapping,
+        'data-strict'           : CONFIG.giscus.strict,
+        'data-reactions-enabled': CONFIG.giscus.reactions_enabled,
+        'data-emit-metadata'    : CONFIG.giscus.emit_metadata,
+        'data-theme'            : CONFIG.giscus.theme,
+        'data-lang'             : CONFIG.giscus.lang,
+        'data-input-position'   : CONFIG.giscus.input_position,
+        'data-loading'          : CONFIG.giscus.loading
+      },
+      parentNode: document.querySelector('.giscus-container')
+    }));
+});
+</script>
+
+</body>
+</html>

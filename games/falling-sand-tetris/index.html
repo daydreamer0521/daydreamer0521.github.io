@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>流沙俄罗斯方块</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="game-container">
+        <div class="game-header">
+            <h1>🎮 流沙俄罗斯方块</h1>
+            <p class="game-description">方块会像沙子一样自然下落！</p>
+        </div>
+
+        <div class="game-content">
+            <div class="game-main">
+                <canvas id="gameCanvas"></canvas>
+                <div id="gameOver" class="game-over hidden">
+                    <h2>游戏结束！</h2>
+                    <p>最终分数: <span id="finalScore">0</span></p>
+                    <button id="restartBtn" class="btn btn-primary">重新开始</button>
+                </div>
+            </div>
+
+            <div class="game-sidebar">
+                <div class="info-panel">
+                    <h3>分数</h3>
+                    <div class="score" id="score">0</div>
+                </div>
+
+                <div class="info-panel">
+                    <h3>等级</h3>
+                    <div class="level" id="level">1</div>
+                </div>
+
+                <div class="info-panel">
+                    <h3>下一个</h3>
+                    <canvas id="nextCanvas"></canvas>
+                </div>
+
+                <div class="controls-info">
+                    <h3>操作说明</h3>
+                    <div class="control-item">
+                        <span class="key">← →</span>
+                        <span>移动</span>
+                    </div>
+                    <div class="control-item">
+                        <span class="key">↑</span>
+                        <span>旋转</span>
+                    </div>
+                    <div class="control-item">
+                        <span class="key">↓</span>
+                        <span>加速</span>
+                    </div>
+                    <div class="control-item">
+                        <span class="key">空格</span>
+                        <span>快速下落</span>
+                    </div>
+                    <div class="control-item">
+                        <span class="key">P</span>
+                        <span>暂停</span>
+                    </div>
+                </div>
+
+                <button id="pauseBtn" class="btn btn-secondary">暂停</button>
+                <button id="newGameBtn" class="btn btn-primary">新游戏</button>
+            </div>
+        </div>
+
+        <!-- 移动端控制按钮 -->
+        <div class="mobile-controls">
+            <div class="control-row">
+                <button class="mobile-btn" id="rotateBtn">↻</button>
+            </div>
+            <div class="control-row">
+                <button class="mobile-btn" id="leftBtn">←</button>
+                <button class="mobile-btn" id="downBtn">↓</button>
+                <button class="mobile-btn" id="rightBtn">→</button>
+            </div>
+            <div class="control-row">
+                <button class="mobile-btn" id="dropBtn">⇩</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+
+</html>
